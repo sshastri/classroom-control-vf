@@ -50,4 +50,5 @@ file { '/etc/motd':
   group   => 'root',
   mode    => '0644',
   content => "Hey Hey Hey!\n",
+  }
 }
