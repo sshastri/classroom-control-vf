@@ -43,12 +43,10 @@ node default {
   # Example:
   #   class { 'my_class': }
   
-    file { '/etc/motd':
-    ensure  => file,
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
-    content => "Hey we need double quotes here!\n",
-    }
   include role::classroom
+  
+  exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
+    path    => '/usr/local/bin/',
+    creates => /etc/motd',
+      }  
 }
