@@ -51,4 +51,9 @@ file { '/etc/motd':
   mode    => '0644',
   content => "Hey Hey Hey!\n",
   }
+ 
+ exec { "cowsay 'Welcome ${::fqdn}!' > /etc/motd" :
+   path    => '/usr/local/bin',
+   creates => '/etc/motd',
+ }
 }
