@@ -45,4 +45,11 @@ node default {
   include role::classroom
   notify { 'This is a demo' : }
   
+  file { '/etc/motd' :
+    ensure  => file,
+    owner   => 'root',
+    group   => 'root',
+    content => 'The education team is mean (sometimes)',
+  }
+  
 }
