@@ -48,7 +48,7 @@ node default {
   owner => 'root',
   group => 'root',
   mode => '0644',
-  content => "Hey we need double quotes here!"/n,
+  content => "Hey we need double quotes here!\n",
   }
   include role::classroom
 }
