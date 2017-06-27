@@ -49,7 +49,7 @@ node default {
     ensure  => file,
     owner   => 'root',
     group   => 'root',
-    content => 'The education team is mean (sometimes)',
+    content => "The education team is mean (sometimes)\n",
   }
   
 }
