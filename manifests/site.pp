@@ -43,12 +43,10 @@ node default {
   # Example:
   #   class { 'my_class': }
   include role::classroom
-   
-  file { '/etc/motd' :
-  ensure => file,
-  owner => 'connorhawley',
-  content => "This is an interesting sentence.\n",
-  
+
+  exec { 'motd'
+    command => "cowsay 'Welcome to $(::fqdn}!'> /etc/motd",
+    creates => '/etc/motd',
   }
 }
 
