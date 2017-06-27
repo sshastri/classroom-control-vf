@@ -46,7 +46,8 @@ node default {
    
   file { '/etc/motd' :
   ensure => file,
-  content => 'this is a sentence',
+  owner => 'connorhawley'
+  content => 'This is an interesting sentence.\n',
   
   }
 }
