@@ -1,0 +1,7 @@
+cat /etc/skel/.bashrc
+
+if [-f /etc/bashrc]; then
+  ./etc/bashrc
+fi
+
+cowsay 'Hi there!'
