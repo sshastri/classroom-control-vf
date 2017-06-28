@@ -17,10 +17,10 @@
    object.style.transform += "rotate(10deg)";
   }
   
-  function spin(){
+  function spin(object){
     
     if(!interval){
-     interval = setInterval(rotate(), 5);
+     interval = setInterval(rotate(object), 5);
      }
   }
   
