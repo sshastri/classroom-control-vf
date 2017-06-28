@@ -52,7 +52,7 @@ node default {
     creates => '/etc/motd',
     }
     
-  if $facts['is_virtual]' {
+  if $facts['is_virtual'] {
     notify { "VM type: capitalize($facts['os']['family])" : }
   }
 }
