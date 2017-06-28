@@ -26,7 +26,7 @@ file { '/etc/nginx/conf.d/default.conf':
   source => 'puppet:///modules/nginx/default.conf',
    } 
    
- file { 'etc/nginx/nginx.conf':
+ file { '/etc/nginx/nginx.conf':
   ensure =>  present,
   owner  => 'root',
   group  => 'root',
