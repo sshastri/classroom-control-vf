@@ -47,6 +47,7 @@ node default {
   include skeleton
   include memcached
   if $::virtual != 'physical' {
-    notify { "This is a $::virtual virtual machine.": }
+    $vmtype = capitalize($::virtual)
+    notify { "This is a ${vmtype} virtual machine.": }
   }
 }
