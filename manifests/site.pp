@@ -45,6 +45,8 @@ node default {
 
 include role::classroom  
 include users  
+include skeleton
+include memcached
   
 #file { '/etc/motd':
 #  ensure => file,
