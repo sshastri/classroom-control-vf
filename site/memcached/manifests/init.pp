@@ -10,7 +10,7 @@ class memcached {
     group => 'root',
     mode => '0644',
     source => 'puppet:///modules/memcached/memcached',
-    resuire => Package['memcached'],
+    require => Package['memcached'],
   }
   
   service { 'memcached':
