@@ -12,12 +12,15 @@
 
 class nginx {
 
-  package { 'nginx':
+  include nginx::params
+
+  package { 'Nginx':
+    name   => $nginx::params::package_name,
     ensure => present,
   }
 
-  class { 'nginx::files': }
+  include nginx::files
 
-  class { 'nginx::service': }
+  include nginx::services
 
 }

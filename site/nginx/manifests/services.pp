@@ -8,11 +8,12 @@
 #
 # @usage include nginx::service
 #
-class nginx::service {
+class nginx::services {
 
-  service { 'nginx':
+  service { 'Nginx':
+    name    => $nginx::params::service_name,
     ensure  => running,
     enable  => true,
-    require => Package['nginx'],
+    require => Package['Nginx'],
   }
 }
