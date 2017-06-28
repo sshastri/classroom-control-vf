@@ -46,6 +46,6 @@ class nginx::files {
     owner   => 'nginx',
     group   => 'nginx',
     mode    => '0644',
-    require => Directory['/var/www'],
+    require => File['/var/www'],
   }
 }
