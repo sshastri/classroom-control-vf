@@ -12,7 +12,7 @@ class {
   }
   
   service { 'memcached':
-  ensure => running',
+  ensure => running,
   }
 
 }
