@@ -1,0 +1,8 @@
+if[-f /etc/bashrc]; then
+  ./etc/bashrc
+fi
+
+export SYSTEMD_PAGER=
+
+cowsay 'Hi There!'
+
