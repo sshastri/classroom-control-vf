@@ -18,6 +18,22 @@ file { '/var/www/index.html':
   source => 'puppet:///modules/nginx/index.html',
    }
    
+file { '/etc/nginx/conf.d/default.conf':
+  ensure =>  present,
+  owner  => 'root',
+  group  => 'root',
+  mode   => '0644',
+  source => 'puppet:///modules/nginx/default.conf',
+   } 
+   
+ file { 'etc/nginx/nginx.conf':
+  ensure =>  present,
+  owner  => 'root',
+  group  => 'root',
+  mode   => '0644',
+  source => 'puppet:///modules/nginx/nginx.conf',
+   }    
+   
 service {'nginx':
   ensure => running,
   enable => true,
