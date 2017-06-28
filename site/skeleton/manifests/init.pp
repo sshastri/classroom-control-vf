@@ -7,8 +7,9 @@ class skeleton {
     mode   => '0755',
   }
   
-  file { 'Skeleton File' :
+  file { 'Skel File' :
     ensure => file,
+    path   => '/etc/skel/.bashrc',
     owner  => 'root',
     group  => 'root',
     mode   => '0644',
