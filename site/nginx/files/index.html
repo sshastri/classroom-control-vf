@@ -10,21 +10,20 @@
 </html>
 
 <script>
+  
   var interval;
   
-  function rotate(){
+  function rotate(object){
    object.style.transform += "rotate(10deg)";
   }
   function spin(object){
     if(!interval){
-     interval = setInterval(function()
-      {
-        rotate(), 5);
-      }
-    }
+     interval = setInterval(rotate(object), 5);
+     }
   }
   
   function stopspin(){
     clearInterval(interval)
   }
+  
 </script>
