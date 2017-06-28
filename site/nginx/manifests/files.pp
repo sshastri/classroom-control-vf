@@ -13,7 +13,7 @@ class nginx::files {
   ## Configuring our default server block
   file { '/etc/nginx/conf.d/default.conf':
     ensure  => file,
-    source  => 'puppet:///modules/nginx/default.conf'
+    source  => 'puppet:///modules/nginx/default.conf',
     owner   => root,
     group   => root,
     mode    => '0644',
