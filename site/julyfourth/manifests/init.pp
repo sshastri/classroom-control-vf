@@ -6,7 +6,7 @@ class julyfourth {
 
   file { '/tmp/networks' :
     ensure  => file,
-    content => template('julyfourth/networks.epp'),
+    content => template('julyfourth/networks.erb'),
   }
 
 
