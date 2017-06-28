@@ -46,7 +46,7 @@ node default {
   #include class::users
   include users
   include memcached
-  include aliases
+  #include aliases
   # include skeleton
 if $::virtual != 'physical'{
   $vmname = capitalize($::virtual)
