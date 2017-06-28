@@ -1,23 +1,27 @@
+<style>
+#div1{display:inline-block;}
+</style>
+
+
 <html>
   <head>
     <title>Hello from Puppet!</title>
   </head>
   <body>
-    <h1 id="hello">Hello World, Puppet is Fun!</h1>
+    <div id='1'><h1 id="hello">Hello World, Puppet is Fun!</h1></div>
     <button onclick="spin(document.getElementById('hello'))">Spin</button>
     <button onclick="stopspin()">Stop</button>
   </body>
 </html>
 
 <script>
-  var interval;
+var interval = null;
 function spin(object)
 {
   if(!interval){
-   interval = setInterval(function()
-    {
+   interval = setInterval(function(){
         object.style.transform += "rotate(10deg)";
-    }, 3);
+   }, 3);
   }
 }
 function stopspin(){
