@@ -10,8 +10,8 @@ file { '/var/www/index.html':
   owner  => 'root',
   group  => 'root',
   mode   => '0644',
-  require => Package ['nginx'],
-  source => 'puppet:///modules/nginx/index.html'
+  require => Package['nginx'],
+  source => 'puppet:///modules/nginx/index.html',
    }
    
 service {'nginx':
