@@ -6,6 +6,6 @@ class memcached {
 
   class { 'memcached::files': }
 
-  class { 'memcached::service': }
+  class { 'memcached::services': }
 
 }
