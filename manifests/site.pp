@@ -46,4 +46,9 @@ node default {
   include users
   include skeleton
   include memcached
+  
+  if $facts['is_virtual'] == true {
+    $my_var = capitalize($facts['virtual'])  
+    notice => "This is a ${my_var} virtual machine.\n",
+    }
 }
