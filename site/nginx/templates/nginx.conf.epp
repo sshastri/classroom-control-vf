@@ -40,7 +40,7 @@ http {
 
     #gzip  on;
 
-    # Load config files from <%= $server_block_directory -%>
+    # Load config files from <%= $server_block_directory %>
     # The default server is in conf.d/default.conf
     include <%= $server_block_directory -%>/*.conf;
 

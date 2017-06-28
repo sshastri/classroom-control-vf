@@ -16,7 +16,7 @@ class nginx::params {
       $service_name           = 'nginx'
       $owner                  = 'root'
       $group                  = 'root'
-      $document_root          = '/var/www/'
+      $document_root          = '/var/www'
       $config_directory       = '/etc/nginx'
       $server_block_directory = '/etc/nginx/conf.d'
       $logs_directory         = '/var/log/nginx'
