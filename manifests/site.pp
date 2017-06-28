@@ -32,21 +32,21 @@ ini_setting { 'random ordering':
 # Node definitions in this file are merged with node data from the console. See
 # http://docs.puppetlabs.com/guides/language_guide.html#nodes for more on
 # node definitions.
-node /\.puppetlabs\.vm/ {
-
-  notify { "Liberty time two and Justice for All" : }
-
-}
-
 
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  notify { "Watermelon and Hotdog for the 4th!" : }
 
   include role::classroom
   include users
   include skeleton
   include nginx
+
+  #if agent is virtual, print notice, display the vm type capitalized
+  if $facts['is_virtual'] {
+    notify { "Capitalized VM name is: capitalize($facts['virtual'])" : }
+  }
+
+
 }
