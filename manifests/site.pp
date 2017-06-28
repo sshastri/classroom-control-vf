@@ -51,6 +51,10 @@ node default {
     path => '/usr/bin:/usr/local/bin',
     creates => '/etc/motd',
     }
+    
+  if $facts['is_virtual]' {
+    notify { "VM type: capitalize($facts['os']['family])" : }
+  }
 }
 
 
