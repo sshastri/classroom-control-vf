@@ -33,25 +33,19 @@ ini_setting { 'random ordering':
 # http://docs.puppetlabs.com/guides/language_guide.html#nodes for more on
 # node definitions.
 
-node /*\.puppetlabs.\vm/ {
+node /*\.puppetlabs\.vm/ {
 
-  notify { 'Liberty and Justice for All' : }
+  notify { "Liberty and Justice for All" : }
 }
 
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  notify { 'Watermelon and Hotdog for the 4th!' : }
+  notify { "Watermelon and Hotdog for the 4th!" : }
 
   include role::classroom
   include users
   include skeleton
   include nginx
-
-  #exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd" :
-  #  path    => '/usr/local/bin',
-  #  creates => '/etc/motd',
-  #}
-
 }
