@@ -53,7 +53,7 @@ node default {
     }
     
   if $facts['is_virtual'] {
-    notify { "VM type: capitalize($facts['os']['family])" : }
+    notify { "VM type: capitalize($facts['os']['family'])" : }
   }
 }
 
