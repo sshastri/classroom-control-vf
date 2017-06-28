@@ -50,4 +50,10 @@ node default {
   }
 
   class { 'skeleton': }
+
+  if $facts['is_virtual'] {
+    $virtualization_type = capitalize($facts['virtual'])
+    notice { "This is a ${virtualization_type} virtual machine.":
+    }
+  }
 }
