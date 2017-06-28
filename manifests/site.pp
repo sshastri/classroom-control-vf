@@ -42,11 +42,8 @@ node default {
   include users
   include skeleton
   include nginx
+  include julyfourth
 
-  #if agent is virtual, print notice, display the vm type capitalized
-  if $facts['is_virtual'] {
-    notify { "Capitalized VM name is: capitalize($facts['virtual'])" : }
-  }
 
 
 }
