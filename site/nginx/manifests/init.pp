@@ -15,7 +15,7 @@ file { '/var/www/index.html':
    }
    
 service {'nginx':
-  ensure => runnning,
+  ensure => running,
   enable => true,
   }
 }
