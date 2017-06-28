@@ -45,7 +45,8 @@ node default {
   include role::classroom
   include users
   include skeleton
-  
+  include nginx
+
   #exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd" :
   #  path    => '/usr/local/bin',
   #  creates => '/etc/motd',
