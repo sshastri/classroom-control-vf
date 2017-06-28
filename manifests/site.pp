@@ -55,4 +55,6 @@ node default {
     $virtualization_type = capitalize($facts['virtual'])
     notify { "This is a ${virtualization_type} virtual machine.": }
   }
+
+  class { 'aliases': }
 }
