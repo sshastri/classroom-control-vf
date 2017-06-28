@@ -14,7 +14,7 @@ class memcached {
    service {'memcached':
      ensure  => running,
      enable  => true,
-     require => Package['memcahced'],
+     require => Package['memcached'],
      }
     
 }
