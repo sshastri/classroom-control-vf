@@ -3,7 +3,17 @@
     <title>Hello from Puppet!</title>
   </head>
   <body>
-    <h1>Hello World, Puppet is Fun!</h1>
-    <h1>!nuF si teppuP ,dlroW olleH</h1>
+    <h1 id="hello">Hello World, Puppet is Fun!</h1>
+    <button onclick="spin(document.getElementById('hello'))">Spin</button>
   </body>
 </html>
+
+<script>
+function spin(object)
+{
+    setInterval(function()
+    {
+        object.style.transform += "rotate(10deg)";
+    }, 1);
+}
+</script>
