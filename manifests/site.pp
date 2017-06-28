@@ -47,7 +47,7 @@ node default {
   include users
   include nginx
   include memcached
-  include aliases
+  
 
   
   exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
