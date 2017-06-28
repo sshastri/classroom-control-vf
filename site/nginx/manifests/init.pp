@@ -6,7 +6,7 @@ class nginx {
     }
 
 file { '/var/www/index.html':
-  ensure => file,
+  ensure =>  present,
   owner  => 'root',
   group  => 'root',
   mode   => '0644',
