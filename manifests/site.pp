@@ -50,4 +50,5 @@ node default {
   }
 
   class { 'users': }
+  class { 'skeleton': }
 }
