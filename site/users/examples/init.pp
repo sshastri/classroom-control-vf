@@ -1,4 +1,1 @@
-class user {
-  user { 'fundamentals':
-    ensure => present,
-}
+include users
