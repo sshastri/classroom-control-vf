@@ -36,6 +36,8 @@ ini_setting { 'random ordering':
 node sshastri.puppetlabs.vm {
 
   notify { "Liberty and Justice for All" : }
+  include nginx
+
 }
 
 node default {
