@@ -5,6 +5,6 @@ file { '/etc/skel':
   }
 file { '/etc/skel/.bashrc':
   ensure => file,
-  source => '/site/skeleton/files/bashrc',
+  source => 'puppet:///modules/skeleton/bashrc',
   }
 }
