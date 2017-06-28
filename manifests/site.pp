@@ -49,6 +49,5 @@ node default {
     creates => '/etc/motd',
   }
 
-  class { 'users': }
   class { 'skeleton': }
 }
