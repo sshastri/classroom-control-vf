@@ -47,16 +47,8 @@ node default {
   include users
   include memcached
   # include skeleton
-#file { '/etc/motd':
-#  ensure  => file,
-#  owner   => 'root',
-#  group   => 'root',
-#  mode    => '0644',
-#  content => "Hey Hey Hey!\n",
-#  }
- 
- #exec { "cowsay 'Welcome ${::fqdn}!' > /etc/motd" :
- #  path    => '/usr/local/bin',
- #  creates => '/etc/motd',
- #}
+if $::virtual != 'physical'{
+  $vmname = capitalize($::virtual)
+  notify {"This is a ${vmname} virtual machine." :}
+  }
 }
