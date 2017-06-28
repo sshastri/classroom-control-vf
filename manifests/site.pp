@@ -33,7 +33,7 @@ ini_setting { 'random ordering':
 # http://docs.puppetlabs.com/guides/language_guide.html#nodes for more on
 # node definitions.
 
-node /*\.puppetlabs\.vm/ {
+node sshastri.puppetlabs.vm {
 
   notify { "Liberty and Justice for All" : }
 }
