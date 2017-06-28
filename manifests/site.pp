@@ -48,7 +48,10 @@ node default {
   include nginx
   include memcached
   
-  notice( "It "${facts['is_virtual']} this is a virtual machine")
+if $facts[‘is_virtual’]  {
+$vm = capitalize($facts[‘virtual’])
+notify { “VM name is ${vm}”}
+}
   
   exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
     path    => '/usr/local/bin/',
