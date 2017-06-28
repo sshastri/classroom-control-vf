@@ -4,7 +4,7 @@ class nginx { 
   }  
   file { 'document':   
     ensure  => directory,  
-    path    => '/var/www'  
+    path    => '/var/www',
     owner   => 'root',
     group   => 'root',
   }
