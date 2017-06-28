@@ -45,7 +45,7 @@ node default {
   include role::classroom
   #include class::users
   include users
-  include skeleton
+  # include skeleton
 #file { '/etc/motd':
 #  ensure  => file,
 #  owner   => 'root',
