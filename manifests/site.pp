@@ -42,9 +42,9 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  #include role::classroom
+  include role::classroom
   #include users
-  #include skeleton
+  include skeleton
   #exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd" :
   #  path => '/usr/local/bin',
   #  creates => '/etc/motd',
