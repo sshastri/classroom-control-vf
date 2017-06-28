@@ -46,8 +46,7 @@ node default {
   #include users
   include skeleton
   include memcached
-  #exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd" :
-  #  path => '/usr/local/bin',
-  #  creates => '/etc/motd',
-  #}
+  if $::virtual != 'physical' {
+    notify { "This is a $::virtual virtual machine.": }
+  }
 }
