@@ -15,6 +15,7 @@ class memcached {
      ensure  => running,
      enable  => true,
      require => Package['memcached'],
+     subscribe => File['/etc/sysconfig/memcached'],
      }
     
 }
