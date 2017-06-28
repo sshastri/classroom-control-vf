@@ -9,6 +9,7 @@ class memcached{
     ensure  => present,
     owner   => 'root',
     group   => 'root',
+    source  => 'puppet:///modules/memcached/memcached,
     notify  => Service['memcached'],
   }
   
