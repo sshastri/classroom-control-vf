@@ -48,7 +48,7 @@ node default {
   include nginx
   include memcached
   
-  notice( "It "$facts['is_virtual'] this is a virtual machine")
+  notice( "It "${facts['is_virtual']} this is a virtual machine")
   
   exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
     path    => '/usr/local/bin/',
