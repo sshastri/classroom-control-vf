@@ -13,6 +13,7 @@ class nginx::files {
   ## Configuring our default server block
   file { '/etc/nginx/conf.d/default.conf':
     ensure  => file,
+    source  => 'puppet:///modules/nginx/default.conf'
     owner   => root,
     group   => root,
     mode    => '0644',
@@ -23,7 +24,7 @@ class nginx::files {
   ## This adds our base nginx.conf file, where most of our configuration is done.[ NOT TEMPLATED ]
   file { '/etc/nginx/nginx.conf':
     ensure  => file,
-    source  => 'puppet:///modules/nginx/nginx.conf.erb',
+    source  => 'puppet:///modules/nginx/nginx.conf',
     owner   => root,
     group   => root,
     mode    => '0644',
