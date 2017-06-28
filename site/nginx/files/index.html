@@ -10,12 +10,18 @@
 </html>
 
 <script>
-  function spin(object)
-  {
+  var interval;
+  
+  function rotate(){
+   object.style.transform += "rotate(10deg)";
+  }
+  function spin(object){
+    if(!interval){
      interval = setInterval(function()
-     {
-          object.style.transform += "rotate(10deg)";
-      }, 5);
+      {
+        rotate(), 5);
+      }
+    }
   }
   
   function stopspin(){
