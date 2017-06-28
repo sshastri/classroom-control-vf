@@ -1,0 +1,414 @@
+aio_agent_version: 1.9.3
+augeas:
+  version: 1.4.0
+disks:
+  xvda:
+    size: 30.00 GiB
+    size_bytes: 32212254720
+dmi:
+  bios:
+    release_date: 02/16/2017
+    vendor: Xen
+    version: 4.2.amazon
+  chassis:
+    type: Other
+  manufacturer: Xen
+  product:
+    name: HVM domU
+    serial_number: ec28fc3b-d73f-060c-43a2-18cd836c42e4
+    uuid: EC28FC3B-D73F-060C-43A2-18CD836C42E4
+facterversion: 3.6.2
+filesystems: iso9660,xfs
+identity:
+  gid: 0
+  group: root
+  privileged: true
+  uid: 0
+  user: root
+is_virtual: true
+kernel: Linux
+kernelmajversion: "3.10"
+kernelrelease: 3.10.0-514.16.1.el7.x86_64
+kernelversion: 3.10.0
+load_averages:
+  15m: 0.84
+  1m: 1.04
+  5m: 0.79
+memory:
+  system:
+    available: 7.29 GiB
+    available_bytes: 7823048704
+    capacity: 52.27%
+    total: 15.26 GiB
+    total_bytes: 16388935680
+    used: 7.98 GiB
+    used_bytes: 8565886976
+mountpoints:
+  /:
+    available: 9.35 GiB
+    available_bytes: 10037624832
+    capacity: 6.43%
+    device: "/dev/mapper/docker-202:1-19310483-3533abf216fc92981d08538086967b1d70a19c4bcd021e6e3758a8dcc2a5828f"
+    filesystem: xfs
+    options:
+      - rw
+      - relatime
+      - nouuid
+      - attr2
+      - inode64
+      - noquota
+    size: 9.99 GiB
+    size_bytes: 10726932480
+    used: 657.38 MiB
+    used_bytes: 689307648
+  /dev:
+    available: 7.63 GiB
+    available_bytes: 8194465792
+    capacity: 0%
+    device: tmpfs
+    filesystem: tmpfs
+    options:
+      - rw
+      - nosuid
+      - mode=755
+    size: 7.63 GiB
+    size_bytes: 8194465792
+    used: 0 bytes
+    used_bytes: 0
+  /dev/shm:
+    available: 64.00 MiB
+    available_bytes: 67108864
+    capacity: 0%
+    device: shm
+    filesystem: tmpfs
+    options:
+      - rw
+      - nosuid
+      - nodev
+      - noexec
+      - relatime
+      - size=65536k
+    size: 64.00 MiB
+    size_bytes: 67108864
+    used: 0 bytes
+    used_bytes: 0
+  /etc/hostname:
+    available: 21.16 GiB
+    available_bytes: 22723035136
+    capacity: 29.43%
+    device: /dev/xvda1
+    filesystem: xfs
+    options:
+      - rw
+      - relatime
+      - attr2
+      - inode64
+      - noquota
+    size: 29.99 GiB
+    size_bytes: 32198660096
+    used: 8.82 GiB
+    used_bytes: 9475624960
+  /etc/hosts:
+    available: 21.16 GiB
+    available_bytes: 22723035136
+    capacity: 29.43%
+    device: /dev/xvda1
+    filesystem: xfs
+    options:
+      - rw
+      - relatime
+      - attr2
+      - inode64
+      - noquota
+    size: 29.99 GiB
+    size_bytes: 32198660096
+    used: 8.82 GiB
+    used_bytes: 9475624960
+  /etc/puppetlabs/puppet:
+    available: 21.16 GiB
+    available_bytes: 22723035136
+    capacity: 29.43%
+    device: /dev/xvda1
+    filesystem: xfs
+    options:
+      - rw
+      - relatime
+      - attr2
+      - inode64
+      - noquota
+    size: 29.99 GiB
+    size_bytes: 32198660096
+    used: 8.82 GiB
+    used_bytes: 9475624960
+  /etc/resolv.conf:
+    available: 21.16 GiB
+    available_bytes: 22723035136
+    capacity: 29.43%
+    device: /dev/xvda1
+    filesystem: xfs
+    options:
+      - rw
+      - relatime
+      - attr2
+      - inode64
+      - noquota
+    size: 29.99 GiB
+    size_bytes: 32198660096
+    used: 8.82 GiB
+    used_bytes: 9475624960
+  /proc/kcore:
+    available: 7.63 GiB
+    available_bytes: 8194465792
+    capacity: 0%
+    device: tmpfs
+    filesystem: tmpfs
+    options:
+      - rw
+      - nosuid
+      - mode=755
+    size: 7.63 GiB
+    size_bytes: 8194465792
+    used: 0 bytes
+    used_bytes: 0
+  /proc/sched_debug:
+    available: 7.63 GiB
+    available_bytes: 8194465792
+    capacity: 0%
+    device: tmpfs
+    filesystem: tmpfs
+    options:
+      - rw
+      - nosuid
+      - mode=755
+    size: 7.63 GiB
+    size_bytes: 8194465792
+    used: 0 bytes
+    used_bytes: 0
+  /proc/timer_list:
+    available: 7.63 GiB
+    available_bytes: 8194465792
+    capacity: 0%
+    device: tmpfs
+    filesystem: tmpfs
+    options:
+      - rw
+      - nosuid
+      - mode=755
+    size: 7.63 GiB
+    size_bytes: 8194465792
+    used: 0 bytes
+    used_bytes: 0
+  /proc/timer_stats:
+    available: 7.63 GiB
+    available_bytes: 8194465792
+    capacity: 0%
+    device: tmpfs
+    filesystem: tmpfs
+    options:
+      - rw
+      - nosuid
+      - mode=755
+    size: 7.63 GiB
+    size_bytes: 8194465792
+    used: 0 bytes
+    used_bytes: 0
+  /run:
+    available: 7.62 GiB
+    available_bytes: 8185692160
+    capacity: 0.11%
+    device: tmpfs
+    filesystem: tmpfs
+    options:
+      - rw
+      - nosuid
+      - nodev
+      - noexec
+      - relatime
+    size: 7.63 GiB
+    size_bytes: 8194465792
+    used: 8.37 MiB
+    used_bytes: 8773632
+  /sys/firmware:
+    available: 7.63 GiB
+    available_bytes: 8194465792
+    capacity: 0%
+    device: tmpfs
+    filesystem: tmpfs
+    options:
+      - ro
+      - relatime
+    size: 7.63 GiB
+    size_bytes: 8194465792
+    used: 0 bytes
+    used_bytes: 0
+  /sys/fs/cgroup:
+    available: 7.63 GiB
+    available_bytes: 8194465792
+    capacity: 0%
+    device: tmpfs
+    filesystem: tmpfs
+    options:
+      - ro
+      - relatime
+      - mode=755
+    size: 7.63 GiB
+    size_bytes: 8194465792
+    used: 0 bytes
+    used_bytes: 0
+  /tmp:
+    available: 7.63 GiB
+    available_bytes: 8194441216
+    capacity: 0.00%
+    device: tmpfs
+    filesystem: tmpfs
+    options:
+      - rw
+      - nosuid
+      - nodev
+      - noexec
+      - relatime
+    size: 7.63 GiB
+    size_bytes: 8194465792
+    used: 24.00 KiB
+    used_bytes: 24576
+  /var/cache/rubygems:
+    available: 21.16 GiB
+    available_bytes: 22723035136
+    capacity: 29.43%
+    device: /dev/xvda1
+    filesystem: xfs
+    options:
+      - rw
+      - relatime
+      - attr2
+      - inode64
+      - noquota
+    size: 29.99 GiB
+    size_bytes: 32198660096
+    used: 8.82 GiB
+    used_bytes: 9475624960
+  /var/yum:
+    available: 21.16 GiB
+    available_bytes: 22723035136
+    capacity: 29.43%
+    device: /dev/xvda1
+    filesystem: xfs
+    options:
+      - rw
+      - relatime
+      - attr2
+      - inode64
+      - noquota
+    size: 29.99 GiB
+    size_bytes: 32198660096
+    used: 8.82 GiB
+    used_bytes: 9475624960
+networking:
+  domain: puppetlabs.vm
+  fqdn: sshastri.puppetlabs.vm
+  hostname: sshastri
+  interfaces:
+    eth0:
+      bindings:
+        - address: 172.17.0.2
+          netmask: 255.255.0.0
+          network: 172.17.0.0
+      ip: 172.17.0.2
+      mac: "02:42:ac:11:00:02"
+      mtu: 1500
+      netmask: 255.255.0.0
+      network: 172.17.0.0
+    lo:
+      bindings:
+        - address: 127.0.0.1
+          netmask: 255.0.0.0
+          network: 127.0.0.0
+      ip: 127.0.0.1
+      mtu: 65536
+      netmask: 255.0.0.0
+      network: 127.0.0.0
+  ip: 172.17.0.2
+  mac: "02:42:ac:11:00:02"
+  mtu: 1500
+  netmask: 255.255.0.0
+  network: 172.17.0.0
+  primary: eth0
+os:
+  architecture: x86_64
+  family: RedHat
+  hardware: x86_64
+  name: CentOS
+  release:
+    full: 7.3.1611
+    major: "7"
+    minor: "3"
+  selinux:
+    enabled: false
+partitions:
+  /dev/loop0:
+    backing_file: /var/lib/docker/devicemapper/devicemapper/data
+    size: 100.00 GiB
+    size_bytes: 107374182400
+  /dev/loop1:
+    backing_file: /var/lib/docker/devicemapper/devicemapper/metadata
+    size: 2.00 GiB
+    size_bytes: 2147483648
+  "/dev/mapper/docker-202:1-19310483-006c5469aff98a557774e5efd031224bbf3cd82e46ed4a2753925c9b29a588e3":
+    size: 10.00 GiB
+    size_bytes: 10737418240
+  "/dev/mapper/docker-202:1-19310483-1e6ca1dc1a4b72c215f0cc9eabc3fb04799bc32912abca1a1ea18b3a1318ec06":
+    size: 10.00 GiB
+    size_bytes: 10737418240
+  "/dev/mapper/docker-202:1-19310483-3024d875278d58cc34535b667d28966fa3589305ba10f34e6a7f2d40ecaf17c7":
+    size: 10.00 GiB
+    size_bytes: 10737418240
+  "/dev/mapper/docker-202:1-19310483-3533abf216fc92981d08538086967b1d70a19c4bcd021e6e3758a8dcc2a5828f":
+    mount: /
+    size: 10.00 GiB
+    size_bytes: 10737418240
+  "/dev/mapper/docker-202:1-19310483-69be4b14a2a3715fe61148c9cd127e7aa9e668310c7ab7c62520b897c3017cb9":
+    size: 10.00 GiB
+    size_bytes: 10737418240
+  "/dev/mapper/docker-202:1-19310483-74ab32ad6edbcd13e5cea2ec344f45728e0413df6e03d968bb610034a3e81fbb":
+    size: 10.00 GiB
+    size_bytes: 10737418240
+  "/dev/mapper/docker-202:1-19310483-b5cce45ebb774f43cd0ba2b8ceeb3944356f6d5d81a34bd6d3c7f1cb7e1e8c3a":
+    size: 10.00 GiB
+    size_bytes: 10737418240
+  "/dev/mapper/docker-202:1-19310483-b865e12ec0fe5130c6d6ec277d421c8e0634e98c1a706bfb7896918969241f0a":
+    size: 10.00 GiB
+    size_bytes: 10737418240
+  "/dev/mapper/docker-202:1-19310483-bcdb4fc05768023528afea3659eff1a42e2f6ba6b9320833b57542ec080347d1":
+    size: 10.00 GiB
+    size_bytes: 10737418240
+  "/dev/mapper/docker-202:1-19310483-cb48e857210197d2b800beffb4ebbafd7d23cac38576f15addfd50856288e01f":
+    size: 10.00 GiB
+    size_bytes: 10737418240
+  "/dev/mapper/docker-202:1-19310483-pool":
+    size: 100.00 GiB
+    size_bytes: 107374182400
+  /dev/xvda1:
+    mount: /var/yum
+    size: 30.00 GiB
+    size_bytes: 32209147904
+path: "/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/puppetlabs/bin:/root/bin"
+processors:
+  count: 4
+  isa: x86_64
+  models:
+    - Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+    - Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+    - Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+    - Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+  physicalcount: 1
+ruby:
+  platform: x86_64-linux
+  sitedir: /opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0
+  version: 2.1.9
+system_uptime:
+  days: 5
+  hours: 121
+  seconds: 438346
+  uptime: 5 days
+timezone: UTC
+virtual: docker

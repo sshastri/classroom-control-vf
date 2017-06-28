@@ -1,0 +1,6 @@
+<% @networking['interfaces'].each |@iface, @value| { -%>
+  Interface <%= @iface %> has an IP of <%= @value['ip'] %>
+<% } -%>
+
+<%= @var %>
+

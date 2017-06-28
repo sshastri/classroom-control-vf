@@ -1,0 +1,8 @@
+<% if $osfamily == 'RedHat' { -%>
+       This is an EC2 node:
+-------------------------------------------------------
+       AMI ID: <%= $ipaddress %>
+     Hostname: <%= $os['family'] %>
+  Instance ID: <%= $fqdn %>
+Instance Type: <%= $virtual %>
+<% } -%>
