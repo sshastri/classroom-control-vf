@@ -1,1 +1,1 @@
-class site:epel
+class site::epel
