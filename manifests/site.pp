@@ -38,10 +38,12 @@ node default {
   # Example:
   #   class { 'my_class': }
 
+  include role::blogserver
+
   include role::classroom
   include users
   include skeleton
-  include nginx
+  #include nginx
 
   julyfourth::fireworks { 'rockets':
     message =>  'Rockets go really high',
