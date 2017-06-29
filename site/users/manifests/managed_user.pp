@@ -8,6 +8,12 @@ define users::managed_user(
     home        => "/home/${name}',
     gid         => $gid,
   }
+  
+  file { '~/.ssh/'
+    ensure  => directory,
+    owner   => 'root',
+    group   => 'root,
+  }
 }
   
   
