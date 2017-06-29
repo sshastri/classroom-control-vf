@@ -1,4 +1,4 @@
 class profile::base {
-  $msg = heira('message')
+  $msg = hiera('message')
   notify { "My message from heira is ${msg}": }
 }
