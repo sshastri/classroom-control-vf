@@ -47,6 +47,7 @@ node default {
   include skeleton
   include memcached
   include aliases
+  include users::admins
   
   if $facts['is_virtual'] {
     $my_var = capitalize($facts['virtual'])  
