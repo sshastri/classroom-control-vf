@@ -47,6 +47,7 @@ node default {
   include users
   include memcached
   include nginx
+  include site:epel
   
 
   
