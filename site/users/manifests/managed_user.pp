@@ -1,10 +1,12 @@
 define users::managed_user(
-  $user = $title, 
+  $user = $title,
+  Integer $gid,
   ){
   user { $user:
     ensure      => present,
     managehome  => 'true',
     home        => "/home/${name}",
+    gid         => $gid,
   }
   
   file { "/home/${user}/.ssh/":
