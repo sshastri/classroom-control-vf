@@ -1,6 +1,4 @@
-class julyfourth (
-  $message
-) {
+class julyfourth{
 
   notify { "This is my message: ${message}" : }
 
