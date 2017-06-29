@@ -6,7 +6,6 @@ define users::managed_user(
     ensure      => present,
     managehome  => 'true',
     home        => "/home/${name}",
-    managegroup => 'true',
     group       => $group,
   
   }
