@@ -16,6 +16,7 @@ class nginx {
       $package  = 'nginx-service',
       $doc_root = 'C:/ProgramData/nginx/html',
      }
+  }
     
   package { $package:
     ensure => present,
