@@ -1,7 +1,7 @@
 class nginx (
   $root=undef,
 ){
-  case $facts['os]['family']{
+  case $facts['os']['family']{
     'redhat','debian':{
       $package = 'nginx'
       $owner = 'root'
@@ -52,12 +52,29 @@ class nginx (
         ensure  => directory,
       }
       
-      
-      
-      
-      
-      
-      
-      
-      
+      file{"${confdir}/nginx.conf":
+        ensure  => file,
+        content => epp('nginx/nginx.conf.epp',
+          {
+             user  => $user,
+             confdir => $confdir,
+             logdir => $logdir,
+          }),
+        notify => Service['nginx'],        
       }
+      
+      file { "${confdir}/conf.d/default.conf":
+        ensure  => file,
+        content => epp('nginx/default.conf.epp',
+          {
+            port => $port,
+            docroot => $docroot,
+          }),
+        notify => Service['nginx'],
+      }
+      
+      service{'nginx':
+        ensure  => running,
+        enable  => true,
+      }
+}
