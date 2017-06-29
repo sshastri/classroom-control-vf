@@ -51,4 +51,6 @@ node default {
     message =>  'Spinners stay on the ground',
   }
 
+  include wrappers::epel
+
 }
