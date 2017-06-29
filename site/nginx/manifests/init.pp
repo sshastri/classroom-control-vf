@@ -50,7 +50,8 @@ class nginx { 
   
   file { "${config_dir}/nginx.conf":
     ensure  => file,
-    content => epp('nginx/nginx.conf.epp', {user            => $user, 
+    content => epp('nginx/nginx.conf.epp', {
+                                             user            => $user, 
                                              config_dir     => $config_dir, 
                                              logs_dir       => $logs_dir, 
                                              svr_block_dir  => $svr_block_dir,}),
