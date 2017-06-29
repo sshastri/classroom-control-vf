@@ -43,8 +43,6 @@ node default {
   include skeleton
   include nginx
 
-  include julyfourth
-
   julyfourth::fireworks { 'rockets':
     message =>  'Rockets go really high',
   }
