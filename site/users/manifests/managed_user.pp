@@ -1,8 +1,9 @@
 define user::managed_user{
   user {"${title":
-     "directory" => "/home/${title}",
-     "groups" => "wheel",
-     "shell" => "/bin/bash",
+     ensure => present,
+     home => "/home/${title}",
+     groups => "wheel",
+     shell => "/bin/bash",
      }
      
  }
