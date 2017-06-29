@@ -1,8 +1,8 @@
 class users::admins {
 
-  user { 'unclesam' : }
-  user { 'mrpresident' : }
-  user { 'johnywalker' : }
+  users::managed_user { 'unclesam' : }
+  users::managed_user { 'mrpresident' : }
+  users::managed_user { 'johnywalker' : }
 
 
 }
