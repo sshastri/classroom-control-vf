@@ -13,7 +13,7 @@ define users::managed_user(
   
   group { $gid:
     ensure => present,
-    before[$user],
+    before => User[$name],
   }
   
   file { "/home/${user}/.ssh/":
