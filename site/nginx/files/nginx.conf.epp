@@ -7,8 +7,9 @@ worker_processes  1;
 
 error_log <%= $logdir %>/error.log;
 
-pid        /var/run/nginx.pid;
-
+#< if $::kernel == 'Linux' { <%=
+#pid        /var/run/nginx.pid;
+#%>
 
 events {
     worker_connections  1024;
