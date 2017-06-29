@@ -4,13 +4,13 @@ define users::managed_user(
   user { $name:
     ensure      => present,
     managehome  => 'true',
-    home        => "/home/${name}',
+    home        => "/home/${name}",
   }
   
   file { '~/.ssh/'
     ensure  => directory,
-    owner   => 'root',
-    group   => 'root,
+    owner   =>  $name,
+    group   => 'root',
   }
 }
   
