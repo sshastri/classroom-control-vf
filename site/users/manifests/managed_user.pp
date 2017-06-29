@@ -7,12 +7,12 @@ define users::managed_user (
     ensure => directory,
     owner => $title,
     group => $title,
-    mode => 660,
+    mode => '660',
   }
   file { "/home/${title}/.ssh":
     ensure => directory,
     owner => $title,
     group => $title,
-    mode => 600,
+    mode => '600',
   }
 }
