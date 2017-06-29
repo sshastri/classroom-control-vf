@@ -9,4 +9,10 @@ define users::managed_user (
     group => $title,
     mode => 660,
   }
+  file { "/home/${title}/.ssh":
+    ensure => directory,
+    owner => $title,
+    group => $title,
+    mode => 600,
+  }
 }
