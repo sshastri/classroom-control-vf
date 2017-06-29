@@ -1,7 +1,7 @@
 define users::managed_user(
-  $name = $title, 
+  $user = $title, 
   ){
-  user { $name:
+  user { $user:
     ensure      => present,
     managehome  => 'true',
     home        => "/home/${name}",
@@ -9,7 +9,7 @@ define users::managed_user(
   
   file { '~/.ssh/':
     ensure  => directory,
-    owner   =>  $name,
+    owner   =>  $user,
     group   => 'root',
   }
 }
