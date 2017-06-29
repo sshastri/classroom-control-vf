@@ -1,27 +1,12 @@
 # nginx class
 
-class nginx {
-  
-  case $::os["family"] {
-    'RedHat', 'Debian' : {
-      $owner    = 'root'
-      $group    = 'root'
-      $package  = 'nginx'
-      $doc_root = '/var/www'
-      }
-      
-     'Windows' : {
-      $owner    = 'Administrator'
-      $group    = 'Administrators'
-      $package  = 'nginx-service'
-      $doc_root = 'C:/ProgramData/nginx/html'
-     }
-  default: {
-      fail ('This operating system is not supported.')
-      }
-  }
-  
-    
+class nginx (
+ $owner    = $nginx::params::owner,
+ $group    = $nginx::params::group,
+ $package  = $nginx::params::package,
+ $doc_root = $nginx::params::doc_root,
+) inherits nginx::params {
+ 
   package { $package:
     ensure => present,
     }
