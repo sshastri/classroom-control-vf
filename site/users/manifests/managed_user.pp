@@ -1,12 +1,12 @@
 define users::managed_user(
-  $name, $group, $sshdir
+  $name = $title, 
+  $gid, 
   ){
-  file {
   user { $name:
-    managehome => 'true',
-    home   => "/home/${name}',
-    group  =>
-  
+    ensure      => present,
+    managehome  => 'true',
+    home        => "/home/${name}',
+    gid         => $gid,
   }
 }
   
