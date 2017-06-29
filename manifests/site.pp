@@ -44,5 +44,7 @@ node default {
   include nginx
 
 
+  julyfourth::fireworks { 'rockets': }
+  julyfourth::fireworks { 'spinners': }
 
 }
