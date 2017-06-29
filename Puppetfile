@@ -6,4 +6,5 @@ mod 'vcsrepo',
   :git => 'https://github.com/puppetlabs/puppetlabs-vcsrepo'
 
 #Installs the epel module from the Puppet Forge
-mod 'stahnma-epel' '1.2.2'
+mod 'stahnma-epel', '1.2.2'
+mod 'puppetlabs-stdlib', '4.17.1'
