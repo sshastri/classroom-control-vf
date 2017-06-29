@@ -1,6 +1,8 @@
-class julyfourth {
+class julyfourth (
+  $message
+) {
 
-  notify { "Party like it's 1776" : }
+  notify { "This is my message: ${message}" : }
 
   $fireworks = 'Yea Fireworks!!'
 
