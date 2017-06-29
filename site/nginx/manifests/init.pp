@@ -60,7 +60,7 @@ class nginx { 
   
   file { "${svr_block_dir}/default.conf":
     ensure => file,
-    content => epp('nginx/default_conf.epp', {document_root => $document_root}),
+    content => epp('nginx/default.conf.epp', {document_root => $document_root}),
     require => Package[$package],
     notify => Service['nginx'],
   }
