@@ -1,7 +1,10 @@
-define julyfourth::fireworks {
+define julyfourth::fireworks(
+  $message,
+) {
 
   file { "/tmp/${title}" :
-    ensure =>  present,
+    ensure  => present,
+    content => $message,
   }
 
 
