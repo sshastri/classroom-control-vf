@@ -1,5 +1,5 @@
 class users::admins{
-  users::managed_user{'peter'}
+  users::managed_user{'peter':}
   users::managed_user{'kate':
     group  => 'staff',
   }
