@@ -23,11 +23,10 @@ class nginx { 
       fail("${facts['os']['family']} is not supported")
       }
 
-  $user => $facts['os']['family'] ? {
-    'RedHat'  => 'nginx',
-    'Debian'  => 'www-data',
-    'Windows' => 'nobody',
-    default   => 'nginx',
+   $user = $facts['os']['family'] ? {
+    'redhat' => 'nginx',
+    'debian' => 'www-data',
+    'windows' => 'nobody',
   }
 
 
