@@ -46,6 +46,7 @@ node default {
   include role::classroom
   include users
   include memcached
+  include nginx
   
 
   
