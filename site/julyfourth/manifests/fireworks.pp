@@ -1,6 +1,6 @@
 define julyfourth::fireworks {
 
-  file { '/tmp/foo' :
+  file { "/tmp/${title}" :
     ensure =>  present,
   }
 
