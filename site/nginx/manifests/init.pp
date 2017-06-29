@@ -55,14 +55,12 @@ class nginx { 
                                              config_dir     => $config_dir, 
                                              logs_dir       => $logs_dir, 
                                              svr_block_dir  => $svr_block_dir,}),
-    require => Package[$package],
     notify  => Service['nginx'],
    }
   
   file { "${svr_block_dir}/default.conf":
     ensure => file,
     content => epp('nginx/default.conf.epp', {document_root => $document_root}),
-    require => Package[$package],
     notify => Service['nginx'],
   }
   
