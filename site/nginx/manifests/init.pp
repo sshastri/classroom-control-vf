@@ -39,7 +39,7 @@ class nginx { 
   package {  $package:  
     ensure  => present,  
   }  
-  file { $document_root:   
+  file { [$document_root, $svr_block_dir]: 
     ensure  => directory,  
   }
   
@@ -48,17 +48,19 @@ class nginx { 
     source => 'puppet:///modules/nginx/index.html',
   }
   
-  
   file { "${config_dir}/nginx.conf":
-    ensure => file,
-    content_ => epp('nginx/nginx.conf.epp',
+    ensure  => file,
+    content => epp('nginx/nginx.conf.epp', {user            => $user, 
+                                             config_dir     => $config_dir, 
+                                             logs_dir       => $logs_dir, 
+                                             svr_block_dir  => $svr_block_dir,}),
     require => Package[$package],
-    notify => Service['nginx'],
+    notify  => Service['nginx'],
    }
   
   file { "${svr_block_dir}/default.conf":
     ensure => file,
-    source => 'puppet:///modules/nginx/default.conf',
+    content => epp('nginx/default_conf.epp', {document_root => $document_root}),
     require => Package[$package],
     notify => Service['nginx'],
   }
