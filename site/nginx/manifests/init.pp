@@ -16,7 +16,11 @@ class nginx {
       $package  = 'nginx-service',
       $doc_root = 'C:/ProgramData/nginx/html',
      }
+  default: {
+      fail ('This operating system is not supported.')
+      }
   }
+  
     
   package { $package:
     ensure => present,
