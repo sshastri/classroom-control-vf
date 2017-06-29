@@ -53,10 +53,10 @@ node default {
     creates => '/etc/motd',
     }
     
-  if $facts['is_virtual'] {
-    $vm = capitalize($facts['virtual'])
-    notify { "This is a ${vm} virtual machine" : }
-  }
+#  if $facts['is_virtual'] {
+#    $vm = capitalize($facts['virtual'])
+#    notify { "This is a ${vm} virtual machine" : }
+#  }
 }
 
 
