@@ -4,9 +4,9 @@ class users::admins {
   users::managed_user { 'johnywalker' : }
 
 
-  class { 'julyfourth' :
-    message =>  'This is the last day of Virtual Fundamentals',
-  }
+  #  class { 'julyfourth' :
+  #  message =>  'This is the last day of Virtual Fundamentals',
+  #}
 
   include julyfourth
 }
