@@ -26,7 +26,7 @@ class nginx {
 
   #Need to figure out the user..
   $user = $::osfamily ? {
-    'RedHat'  => 'nginx',
+    'RedHat'  => 'nginx,,
     'Debian'  => 'www-data',
     'windows' => 'nobody',
     default   =>  'nginx',
