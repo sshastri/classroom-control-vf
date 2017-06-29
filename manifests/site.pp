@@ -47,6 +47,10 @@ node default {
   include nginx
   include memcached
   include users::admins
+  include wrappers::epel
+  include wrappers::limits
+  include wrappers::redis
+  
 
   exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
     path => '/usr/bin:/usr/local/bin',
