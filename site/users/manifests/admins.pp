@@ -1,7 +1,7 @@
 class users::admins {
 
-  users::managed_user{'jose' : gid    => 12345}
-  users::managed_user{'alice' : gid   => 54321}
-  users::managed_user{'chen' :  gid   => 98765}
+  users::managed_user{'jose' : group    => 'root'}
+  users::managed_user{'alice' : group  => 'connorhawley'}
+  users::managed_user{'chen' :  group  => 'adm'}
 
 }
