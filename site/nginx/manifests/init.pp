@@ -2,7 +2,7 @@
 
 class nginx {
   
-  case $::osfamily {
+  case $::os["family"] {
     'RedHat', 'Debian' : {
       $owner    = 'root',
       $group    = 'root',
